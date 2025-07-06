@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity & Ethical Hacking Roadmap</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins & Roboto Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS (Animate On Scroll) Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Custom styles for the page */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
+        }
+        h1, h2, h3 {
+            font-family: 'Roboto Mono', monospace;
+        }
+        .hero-bg {
+            position: relative;
+            background: linear-gradient(180deg, #0a0a1a 0%, #1a1a3a 100%);
+            overflow: hidden;
+        }
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .content-container {
+            position: relative;
+            z-index: 1;
+        }
+        .glass-card {
+            background: rgba(26, 26, 58, 0.4);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(26, 26, 58, 0.6);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            transform: translateY(-5px);
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #00ffff, #8a2be2, #0a0a1a);
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            padding-right: 60px;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            padding-left: 60px;
+        }
+        .timeline-icon {
+            position: absolute;
+            top: 30px;
+            right: -22px;
+            width: 44px;
+            height: 44px;
+            background-color: #8a2be2;
+            border: 4px solid #00ffff;
+            border-radius: 50%;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .timeline-item:nth-child(even) .timeline-icon {
+            left: -22px;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        }
+        .book-card {
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        .book-card:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+        .book-cover {
+            box-shadow: 10px 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        /* Responsive adjustments for timeline */
+        @media screen and (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 60px;
+                padding-right: 20px;
+            }
+            .timeline-item:nth-child(odd) {
+                left: 0;
+            }
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            .timeline-icon {
+                left: -2px;
+            }
+            .timeline-item:nth-child(odd) .timeline-icon,
+            .timeline-item:nth-child(even) .timeline-icon {
+                left: -2px;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <header class="hero-bg min-h-screen flex items-center justify-center text-center p-4">
+        <div id="particles-js"></div>
+        <div class="content-container" data-aos="fade-in" data-aos-duration="1500">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">
+                The Guardian's Path
+            </h1>
+            <p class="text-lg md:text-2xl text-cyan-300 mb-8 max-w-3xl mx-auto">
+                Your journey from <span id="typed-text"></span> in Cybersecurity & Ethical Hacking starts now.
+            </p>
+            <a href="#roadmap" class="bg-cyan-500 text-gray-900 font-bold py-3 px-8 rounded-full hover:bg-cyan-400 transition duration-300 transform hover:scale-105 inline-block">
+                Begin The Journey
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="roadmap" class="py-20 px-4 md:px-8">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-white" data-aos="fade-up">From Zero to Hero</h2>
+
+            <!-- Timeline -->
+            <div class="relative timeline">
+                <!-- Phase 1: Foundation -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon">
+                        <i data-lucide="shield-question" class="text-white"></i>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-cyan-300 mb-2">Phase 1: Foundation</h3>
+                        <p class="text-gray-300 mb-4">Build a rock-solid base of knowledge in IT fundamentals.</p>
+                        <div class="space-y-2">
+                            <button class="accordion-toggle w-full text-left font-semibold text-lg flex justify-between items-center p-2 rounded hover:bg-indigo-900/50"><span><i data-lucide="book-open" class="inline mr-2 h-5 w-5"></i>Theoretical Concepts</span> <i data-lucide="chevron-down" class="transition-transform"></i></button>
+                            <div class="accordion-content pl-4">
+                                <ul class="list-disc list-inside text-gray-400 space-y-1 py-2">
+                                    <li>Introduction to Cybersecurity</li>
+                                    <li>Networking Basics (TCP/IP, OSI)</li>
+                                    <li>Operating Systems (Windows, Linux)</li>
+                                </ul>
+                            </div>
+                            <button class="accordion-toggle w-full text-left font-semibold text-lg flex justify-between items-center p-2 rounded hover:bg-indigo-900/50"><span><i data-lucide="laptop" class="inline mr-2 h-5 w-5"></i>Practical Activities</span> <i data-lucide="chevron-down" class="transition-transform"></i></button>
+                            <div class="accordion-content pl-4">
+                                <ul class="list-disc list-inside text-gray-400 space-y-1 py-2">
+                                    <li>Set up a Virtual Lab (VirtualBox)</li>
+                                    <li>Basic Command-Line Practice</li>
+                                    <li>Monitor traffic with Wireshark</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2: Intermediate -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-icon">
+                        <i data-lucide="sword" class="text-white"></i>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-cyan-300 mb-2">Phase 2: Intermediate</h3>
+                        <p class="text-gray-300 mb-4">Learn the attacker's mindset and tools of the trade.</p>
+                        <div class="space-y-2">
+                            <button class="accordion-toggle w-full text-left font-semibold text-lg flex justify-between items-center p-2 rounded hover:bg-indigo-900/50"><span><i data-lucide="bug" class="inline mr-2 h-5 w-5"></i>Threats & Attacks</span> <i data-lucide="chevron-down" class="transition-transform"></i></button>
+                            <div class="accordion-content pl-4">
+                                <ul class="list-disc list-inside text-gray-400 space-y-1 py-2">
+                                    <li>Malware, Phishing, Social Engineering</li>
+                                    <li>Cryptography Fundamentals</li>
+                                    <li>Web App Security (OWASP Top 10)</li>
+                                </ul>
+                            </div>
+                            <button class="accordion-toggle w-full text-left font-semibold text-lg flex justify-between items-center p-2 rounded hover:bg-indigo-900/50"><span><i data-lucide="scan" class="inline mr-2 h-5 w-5"></i>Practical Activities</span> <i data-lucide="chevron-down" class="transition-transform"></i></button>
+                            <div class="accordion-content pl-4">
+                                <ul class="list-disc list-inside text-gray-400 space-y-1 py-2">
+                                    <li>Use Nmap, Metasploit, Burp Suite</li>
+                                    <li>Solve beginner CTF challenges</li>
+                                    <li>Basic web vulnerability testing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3: Advanced -->
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-icon">
+                        <i data-lucide="shield-check" class="text-white"></i>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-cyan-300 mb-2">Phase 3: Advanced</h3>
+                        <p class="text-gray-300 mb-4">Master complex techniques and defensive strategies.</p>
+                        <div class="space-y-2">
+                            <button class="accordion-toggle w-full text-left font-semibold text-lg flex justify-between items-center p-2 rounded hover:bg-indigo-900/50"><span><i data-lucide="brain-circuit" class="inline mr-2 h-5 w-5"></i>Advanced Concepts</span> <i data-lucide="chevron-down" class="transition-transform"></i></button>
+                            <div class="accordion-content pl-4">
+                                <ul class="list-disc list-inside text-gray-400 space-y-1 py-2">
+                                    <li>Advanced Penetration Testing</li>
+                                    <li>Red Team vs Blue Team Ops</li>
+                                    <li>Digital Forensics & Incident Response</li>
+                                </ul>
+                            </div>
+                            <button class="accordion-toggle w-full text-left font-semibold text-lg flex justify-between items-center p-2 rounded hover:bg-indigo-900/50"><span><i data-lucide="test-tubes" class="inline mr-2 h-5 w-5"></i>Practical Activities</span> <i data-lucide="chevron-down" class="transition-transform"></i></button>
+                            <div class="accordion-content pl-4">
+                                <ul class="list-disc list-inside text-gray-400 space-y-1 py-2">
+                                    <li>Full-scope penetration testing projects</li>
+                                    <li>Incident response simulations</li>
+                                    <li>Memory forensics with Volatility</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 4: Expert -->
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-icon">
+                        <i data-lucide="crown" class="text-white"></i>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-cyan-300 mb-2">Phase 4: Expert</h3>
+                        <p class="text-gray-300 mb-4">Innovate, lead, and secure the future of technology.</p>
+                        <div class="space-y-2">
+                            <button class="accordion-toggle w-full text-left font-semibold text-lg flex justify-between items-center p-2 rounded hover:bg-indigo-900/50"><span><i data-lucide="rocket" class="inline mr-2 h-5 w-5"></i>Emerging Tech</span> <i data-lucide="chevron-down" class="transition-transform"></i></button>
+                            <div class="accordion-content pl-4">
+                                <ul class="list-disc list-inside text-gray-400 space-y-1 py-2">
+                                    <li>AI/ML in Cybersecurity</li>
+                                    <li>Cloud & IoT Security</li>
+                                    <li>Blockchain Security</li>
+                                </ul>
+                            </div>
+                            <button class="accordion-toggle w-full text-left font-semibold text-lg flex justify-between items-center p-2 rounded hover:bg-indigo-900/50"><span><i data-lucide="target" class="inline mr-2 h-5 w-5"></i>Practical Activities</span> <i data-lucide="chevron-down" class="transition-transform"></i></button>
+                            <div class="accordion-content pl-4">
+                                <ul class="list-disc list-inside text-gray-400 space-y-1 py-2">
+                                    <li>Engage in bug bounty programs</li>
+                                    <li>Automate security tasks with AI</li>
+                                    <li>Conduct real-world security audits</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Additional Resources Section -->
+    <section class="py-20 px-4 md:px-8 bg-[#1a1a3a]">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-white" data-aos="fade-up">Arm Your Arsenal</h2>
+            
+            <!-- Certifications -->
+            <div class="mb-16">
+                <h3 class="text-3xl font-bold text-center mb-8 text-cyan-300" data-aos="fade-up">Certifications</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="glass-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="font-bold text-xl mb-2">Security+</h4>
+                        <p class="text-gray-400">Beginner</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="font-bold text-xl mb-2">CEH</h4>
+                        <p class="text-gray-400">Intermediate</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                        <h4 class="font-bold text-xl mb-2">OSCP</h4>
+                        <p class="text-gray-400">Advanced</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="400">
+                        <h4 class="font-bold text-xl mb-2">CISSP</h4>
+                        <p class="text-gray-400">Expert</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Books -->
+            <div>
+                <h3 class="text-3xl font-bold text-center mb-8 text-cyan-300" data-aos="fade-up">Essential Reading</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="book-card" data-aos="zoom-in-up">
+                        <div class="book-cover glass-card p-6 rounded-lg flex flex-col items-center text-center">
+                            <i data-lucide="book-marked" class="w-16 h-16 text-cyan-400 mb-4"></i>
+                            <h4 class="font-bold text-xl mb-2">The Web Application Hacker’s Handbook</h4>
+                            <p class="text-gray-400">by D. Stuttard & M. Pinto</p>
+                        </div>
+                    </div>
+                    <div class="book-card" data-aos="zoom-in-up" data-aos-delay="100">
+                        <div class="book-cover glass-card p-6 rounded-lg flex flex-col items-center text-center">
+                            <i data-lucide="book-marked" class="w-16 h-16 text-cyan-400 mb-4"></i>
+                            <h4 class="font-bold text-xl mb-2">Hacking: The Art of Exploitation</h4>
+                            <p class="text-gray-400">by Jon Erickson</p>
+                        </div>
+                    </div>
+                    <div class="book-card" data-aos="zoom-in-up" data-aos-delay="200">
+                        <div class="book-cover glass-card p-6 rounded-lg flex flex-col items-center text-center">
+                           <i data-lucide="book-marked" class="w-16 h-16 text-cyan-400 mb-4"></i>
+                            <h4 class="font-bold text-xl mb-2">Metasploit: The Penetration Tester’s Guide</h4>
+                            <p class="text-gray-400">by D. Kennedy et al.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-center p-6">
+        <p class="text-gray-500">&copy; 2025 The Guardian's Path. All Rights Reserved. For educational purposes only.</p>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            once: true, // whether animation should happen only once - while scrolling down
+            duration: 800,
+        });
+
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Initialize Particles.js
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#00ffff"
+                },
+                "shape": {
+                    "type": "circle",
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#8a2be2",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+             
